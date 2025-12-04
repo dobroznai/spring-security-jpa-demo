@@ -1,12 +1,12 @@
 package de.ait.training.repository;
 
+
 import de.ait.training.model.AppUser;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;
 
 public interface AppUserRepository extends JpaRepository<AppUser, Long> {
-
+    //SELECT * FROM users WHERE username = ? LIMIT 1
     Optional<AppUser> findByUsername(String username);
-
 }

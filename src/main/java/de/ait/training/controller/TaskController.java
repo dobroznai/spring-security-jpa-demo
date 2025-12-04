@@ -12,7 +12,7 @@ import java.util.List;
 @RequestMapping("/api")
 public class TaskController {
     //endpoint tasks/me
-    @GetMapping("/tasks/me")
+    @GetMapping("/tasks/my")
     public List<String> myTasks(@AuthenticationPrincipal UserDetails user) {
         String username = user.getUsername();
         return List.of("Задача 1 для пользователя " + username,
